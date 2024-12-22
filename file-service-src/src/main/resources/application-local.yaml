@@ -1,0 +1,13 @@
+spring:
+  data:
+    mongodb:
+      uri: ${DATABASE_MONGO_URL:mongodb://root:root@localhost:27017/testbase?authSource=admin&retryWrites=true&w=majority}
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://backend-keycloak-auth:8080/realms/ITM-Advice
+springdoc:
+  swagger-ui:
+    config-url: /v3/api-docs/swagger-config
+    url: /v3/api-docs
